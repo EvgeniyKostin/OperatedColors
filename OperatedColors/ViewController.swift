@@ -23,20 +23,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
-    /*
-     @IBOutlet weak var redLabel: UILabel!
-     @IBOutlet weak var greenLabel: UILabel!
-     @IBOutlet weak var blueLabel: UILabel!
-     
-     @IBOutlet weak var valueRedLabel: UILabel!
-     @IBOutlet weak var valueGreenLabel: UILabel!
-     @IBOutlet weak var valueBlueLabel: UILabel!
-     
-     @IBOutlet weak var redSlider: UISlider!
-     @IBOutlet weak var greenSlider: UISlider!
-     @IBOutlet weak var blueSlider: UISlider!
-     */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,15 +59,17 @@ class ViewController: UIViewController {
         valueGreenLabel.text = String(greenSlider.value)
         valueBlueLabel.text = String(blueSlider.value)
     }
-
     @IBAction func sliderActionForRed() {
-        valueRedLabel.text = String(redSlider.value)
+        valueRedLabel.text = String((round(redSlider.value * 100) / 100 ))
+        screenColorsView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     @IBAction func sliderActionForGreen() {
-        valueGreenLabel.text = String(greenSlider.value)
+        valueGreenLabel.text = String((round(greenSlider.value * 100) / 100 ))
+        screenColorsView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     @IBAction func sliderActionForBlue() {
-        valueBlueLabel.text = String(blueSlider.value)
+        valueBlueLabel.text = String((round(blueSlider.value * 100) / 100 ))
+        screenColorsView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
 }
 

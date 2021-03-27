@@ -82,22 +82,19 @@
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="49P-AK-JIN">
                                         <rect key="frame" x="-2" y="0.0" width="235" height="31"/>
                                         <connections>
-                                            <action selector="redControlSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="VFY-XK-Tdw"/>
-                                            <action selector="sliderActionForRed" destination="BYZ-38-t0r" eventType="valueChanged" id="cks-Ut-REz"/>
+                                            <action selector="sliderActionForRed" destination="BYZ-38-t0r" eventType="valueChanged" id="0YM-Iw-WLI"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DQL-Mj-Ck2">
                                         <rect key="frame" x="-2" y="54" width="235" height="31"/>
                                         <connections>
-                                            <action selector="greenControlSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="9il-IP-0j0"/>
-                                            <action selector="sliderActionForGreen" destination="BYZ-38-t0r" eventType="valueChanged" id="3MI-T8-700"/>
+                                            <action selector="sliderActionForGreen" destination="BYZ-38-t0r" eventType="valueChanged" id="6QL-fo-dCF"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-3l-PIZ">
                                         <rect key="frame" x="-2" y="108" width="235" height="31"/>
                                         <connections>
-                                            <action selector="blueControlSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="pvc-xu-ROa"/>
-                                            <action selector="sliderActionForBlue" destination="BYZ-38-t0r" eventType="valueChanged" id="7dQ-TQ-OXi"/>
+                                            <action selector="sliderActionForBlue" destination="BYZ-38-t0r" eventType="valueChanged" id="bOW-7b-0a1"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -121,11 +118,11 @@
                     </view>
                     <connections>
                         <outlet property="blueLabel" destination="BfR-jj-nTs" id="D3j-pg-ZQq"/>
-                        <outlet property="blueSlider" destination="WKc-3l-PIZ" id="bcP-JI-d2u"/>
+                        <outlet property="blueSlider" destination="WKc-3l-PIZ" id="etk-Cl-6e0"/>
                         <outlet property="greenLabel" destination="LUP-y1-1MM" id="IaL-WW-DT3"/>
-                        <outlet property="greenSlider" destination="DQL-Mj-Ck2" id="f85-65-XrL"/>
+                        <outlet property="greenSlider" destination="DQL-Mj-Ck2" id="FIH-JQ-5X8"/>
                         <outlet property="redLabel" destination="mam-cE-pxY" id="Zpb-TT-nv3"/>
-                        <outlet property="redSlider" destination="49P-AK-JIN" id="URW-h8-ayf"/>
+                        <outlet property="redSlider" destination="49P-AK-JIN" id="5MO-W9-fO0"/>
                         <outlet property="screenColorsView" destination="Rav-Ho-mFF" id="f73-Im-wka"/>
                         <outlet property="valueBlueLabel" destination="BZu-fQ-vuO" id="C12-f2-KeE"/>
                         <outlet property="valueGreenLabel" destination="ndX-h8-hYZ" id="4S4-6F-9Ui"/>
