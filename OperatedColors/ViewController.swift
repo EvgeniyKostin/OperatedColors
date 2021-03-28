@@ -26,15 +26,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        valueRedLabel.text = ""
-        valueRedLabel.font = valueRedLabel.font.withSize(22)
-        valueGreenLabel.text = ""
-        valueGreenLabel.font = valueGreenLabel.font.withSize(22)
-        valueBlueLabel.text = ""
-        valueBlueLabel.font = valueBlueLabel.font.withSize(22)
-        
+        // MARK: Superview setup
         screenColorsView.layer.cornerRadius = 10
         
+        // MARK: Sliders setup
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
         blueSlider.tintColor = .blue
@@ -43,33 +38,43 @@ class ViewController: UIViewController {
         greenSlider.thumbTintColor = .green
         blueSlider.thumbTintColor = .blue
         
-        redSlider.value = 0.1
-        redSlider.minimumValue = 0
-        redSlider.maximumValue = 1
-        
-        greenSlider.value = 0.2
-        greenSlider.minimumValue = 0
-        greenSlider.maximumValue = 1
-        
-        blueSlider.value = 0.3
-        blueSlider.minimumValue = 0
-        blueSlider.maximumValue = 1
-        
+        // MARK: Labels setup
         valueRedLabel.text = String(redSlider.value)
         valueGreenLabel.text = String(greenSlider.value)
         valueBlueLabel.text = String(blueSlider.value)
+        
+        // MARK: Setup methods
+        colorValueSettings()
+        colorSettings()
     }
+    
+    //MARK: IB Actions
     @IBAction func sliderActionForRed() {
-        valueRedLabel.text = String((round(redSlider.value * 100) / 100 ))
-        screenColorsView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        colorSettings()
+        colorValueSettings()
     }
     @IBAction func sliderActionForGreen() {
-        valueGreenLabel.text = String((round(greenSlider.value * 100) / 100 ))
-        screenColorsView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        colorSettings()
+        colorValueSettings()
     }
     @IBAction func sliderActionForBlue() {
-        valueBlueLabel.text = String((round(blueSlider.value * 100) / 100 ))
-        screenColorsView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        colorSettings()
+        colorValueSettings()
+    }
+    
+    // MARK: Private methods
+    private func colorSettings() {
+        let red = CGFloat(redSlider.value)
+        let green = CGFloat(greenSlider.value)
+        let blue = CGFloat(blueSlider.value)
+        
+        screenColorsView.backgroundColor = UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1)
+    }
+    
+    private func colorValueSettings() {
+        valueRedLabel.text = String(format: "%.2f", redSlider.value)
+        valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
+        valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
     }
 }
 
