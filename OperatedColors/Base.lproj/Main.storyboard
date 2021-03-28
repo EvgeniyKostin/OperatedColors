@@ -17,15 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rav-Ho-mFF">
-                                <rect key="frame" x="20" y="171" width="374" height="374"/>
+                                <rect key="frame" x="20" y="211" width="374" height="374"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="374" id="1cg-tN-dy7"/>
-                                    <constraint firstAttribute="width" constant="374" id="M3l-PT-Tdr"/>
+                                    <constraint firstAttribute="width" secondItem="Rav-Ho-mFF" secondAttribute="height" multiplier="1:1" id="dwK-pl-8FT"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-Kl-r8w">
-                                <rect key="frame" x="20" y="587" width="65" height="137.5"/>
+                                <rect key="frame" x="20" y="627" width="65" height="137.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mam-cE-pxY">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="26.5"/>
@@ -51,7 +50,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="YP2-1f-3hr">
-                                <rect key="frame" x="93" y="587" width="52" height="138"/>
+                                <rect key="frame" x="93" y="627" width="52" height="138"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1an-3X-2la">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="26.5"/>
@@ -77,7 +76,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Sfi-Gf-no5">
-                                <rect key="frame" x="152" y="587" width="231" height="138"/>
+                                <rect key="frame" x="152" y="627" width="231" height="138"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="49P-AK-JIN">
                                         <rect key="frame" x="-2" y="0.0" width="235" height="31"/>
@@ -104,16 +103,16 @@
                         <color key="backgroundColor" red="0.10837488620000001" green="0.1081092134" blue="0.1190437749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2jy-Kl-r8w" firstAttribute="top" secondItem="Sfi-Gf-no5" secondAttribute="top" id="1ph-mf-Hps"/>
+                            <constraint firstItem="Rav-Ho-mFF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="Ak6-Ac-JGk"/>
+                            <constraint firstItem="Rav-Ho-mFF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IZF-Hq-vmx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sfi-Gf-no5" secondAttribute="trailing" constant="31" id="RdD-Bs-vBl"/>
                             <constraint firstItem="YP2-1f-3hr" firstAttribute="leading" secondItem="2jy-Kl-r8w" secondAttribute="trailing" constant="8" symbolic="YES" id="Wdg-KL-2cu"/>
                             <constraint firstItem="Sfi-Gf-no5" firstAttribute="leading" secondItem="YP2-1f-3hr" secondAttribute="trailing" constant="7" id="c6b-ah-aB0"/>
                             <constraint firstItem="2jy-Kl-r8w" firstAttribute="leading" secondItem="Rav-Ho-mFF" secondAttribute="leading" id="eO4-4K-e1d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rav-Ho-mFF" secondAttribute="trailing" constant="20" id="nv0-db-U9M"/>
-                            <constraint firstItem="Rav-Ho-mFF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="oxV-hj-VT0"/>
                             <constraint firstItem="Sfi-Gf-no5" firstAttribute="centerY" secondItem="YP2-1f-3hr" secondAttribute="centerY" id="qgY-0O-VCD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rav-Ho-mFF" secondAttribute="trailing" constant="20" id="teJ-xh-JJ6"/>
                             <constraint firstItem="2jy-Kl-r8w" firstAttribute="top" secondItem="Rav-Ho-mFF" secondAttribute="bottom" constant="42" id="usC-gt-9vm"/>
                             <constraint firstItem="2jy-Kl-r8w" firstAttribute="top" secondItem="YP2-1f-3hr" secondAttribute="top" id="w0c-Gw-DNc"/>
-                            <constraint firstItem="Rav-Ho-mFF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w4Y-dc-mhI"/>
                         </constraints>
                     </view>
                     <connections>
