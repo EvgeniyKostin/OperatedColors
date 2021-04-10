@@ -116,11 +116,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueLabel" destination="BfR-jj-nTs" id="D3j-pg-ZQq"/>
                         <outlet property="blueSlider" destination="WKc-3l-PIZ" id="etk-Cl-6e0"/>
-                        <outlet property="greenLabel" destination="LUP-y1-1MM" id="IaL-WW-DT3"/>
                         <outlet property="greenSlider" destination="DQL-Mj-Ck2" id="FIH-JQ-5X8"/>
-                        <outlet property="redLabel" destination="mam-cE-pxY" id="Zpb-TT-nv3"/>
                         <outlet property="redSlider" destination="49P-AK-JIN" id="5MO-W9-fO0"/>
                         <outlet property="screenColorsView" destination="Rav-Ho-mFF" id="f73-Im-wka"/>
                         <outlet property="valueBlueLabel" destination="BZu-fQ-vuO" id="C12-f2-KeE"/>

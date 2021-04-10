@@ -11,10 +11,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var screenColorsView: UIView!
     
-    @IBOutlet weak var redLabel: UILabel!
-    @IBOutlet weak var greenLabel: UILabel!
-    @IBOutlet weak var blueLabel: UILabel!
-    
     @IBOutlet weak var valueRedLabel: UILabel!
     @IBOutlet weak var valueGreenLabel: UILabel!
     @IBOutlet weak var valueBlueLabel: UILabel!
@@ -26,29 +22,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: Superview setup
+        // Скругляем края screenColorsView
         screenColorsView.layer.cornerRadius = 10
         
-        // MARK: Sliders setup
+        // Устанавливаем цвет для полоски слайдера
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
         blueSlider.tintColor = .blue
         
+        // Устанавливаем цвет для кнопки слайдера
         redSlider.thumbTintColor = .red
         greenSlider.thumbTintColor = .green
         blueSlider.thumbTintColor = .blue
         
-        // MARK: Labels setup
-        valueRedLabel.text = String(redSlider.value)
-        valueGreenLabel.text = String(greenSlider.value)
-        valueBlueLabel.text = String(blueSlider.value)
-        
-        // MARK: Setup methods
-        colorValueSettings()
-        colorSettings()
+        // Устанавливаем методы для слайдеров и screenColorsView
+        colorValueSettings() // Округляет значение слайдера до сотых
+        colorSettings() // Задает цвет для screenColorsView в зависимости от положения слайдера
     }
     
-    //MARK: IB Actions
+    // Приминяем методы colorValueSettings() и colorSettings() к слайдерам при взаимодействии пользователя
     @IBAction func sliderActionForRed() {
         colorSettings()
         colorValueSettings()
@@ -62,7 +54,7 @@ class ViewController: UIViewController {
         colorValueSettings()
     }
     
-    // MARK: Private methods
+    // Задает цвет для screenColorsView в зависимости от положения слайдера
     private func colorSettings() {
         let red = CGFloat(redSlider.value)
         let green = CGFloat(greenSlider.value)
@@ -71,6 +63,7 @@ class ViewController: UIViewController {
         screenColorsView.backgroundColor = UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1)
     }
     
+    // Округляет значение слайдера до сотых
     private func colorValueSettings() {
         valueRedLabel.text = String(format: "%.2f", redSlider.value)
         valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
